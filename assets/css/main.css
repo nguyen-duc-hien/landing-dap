@@ -1,0 +1,190 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        scroll-behavior: smooth;
+    }
+}
+
+@layer utilities {
+    /* heading text */
+
+    .heading-h1 {
+        letter-spacing: -0.01em;
+        @apply text-heading-64 font-bold;
+    }
+
+    .heading-h2 {
+        letter-spacing: -0.01em;
+        @apply text-heading-40 font-bold;
+    }
+
+    .heading-h3 {
+        letter-spacing: -0.01em;
+        @apply text-heading-32 font-bold;
+    }
+
+    .heading-h4 {
+        letter-spacing: -0.01em;
+        @apply text-heading-24 font-bold;
+    }
+
+    .heading-h5 {
+        font-feature-settings: 'salt' on, 'liga' off;
+        @apply text-heading-24 font-semibold;
+    }
+    .heading-52{
+    letter-spacing: -0.01em;
+    @apply text-heading-52 font-extrabold;
+    }
+
+    /* body-text */
+
+    .body-10-regular {
+        @apply text-body-10 font-normal;
+    }
+
+    .body-10-medium {
+        @apply text-body-10 font-medium;
+    }
+
+    .body-10-bold {
+        @apply text-body-10 font-bold;
+    }
+
+
+    .body-12-regular {
+        @apply text-body-12 font-normal;
+    }
+
+    .body-12-medium {
+        @apply text-body-12 font-medium;
+    }
+
+    .body-12-bold {
+        @apply text-body-12 font-bold;
+    }
+
+
+    .body-14-regular {
+        @apply text-body-14 font-normal;
+    }
+
+    .body-14-medium {
+        @apply text-body-14 font-medium;
+    }
+
+    .body-14-bold {
+        @apply text-body-14 font-bold;
+    }
+
+    .body-16-regular {
+        @apply text-body-16 font-normal;
+    }
+
+    .body-16-medium {
+        @apply text-body-16 font-medium;
+    }
+
+    .body-16-medium-italic {
+        @apply text-body-16 font-medium italic;
+    }
+
+    .body-16-bold {
+        font-feature-settings: 'ss06' on, 'ss04' on, 'liga' off;
+        @apply text-body-16 font-bold;
+    }
+
+
+    .body-18-regular {
+        @apply text-body-18 font-normal;
+    }
+
+    .body-18-medium {
+        letter-spacing: -0.005em;
+        @apply text-body-18 font-medium;
+    }
+
+    .body-18-bold {
+        letter-spacing: -0.005em;
+        @apply text-body-18 font-bold;
+    }
+
+
+    .body-20-regular {
+        @apply text-body-20 font-normal;
+    }
+
+    .body-20-medium {
+        letter-spacing: -0.005em;
+        @apply text-body-20 font-medium;
+    }
+
+    .body-20-bold {
+        letter-spacing: -0.005em;
+        @apply text-body-20 font-bold;
+    }
+
+    .effect-none {
+        background: #ffffff00;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
+    }
+
+    .effect-shadow {
+        background: #D9D9D9;
+        box-shadow: 0px 0px 10px rgba(78, 93, 228, 0.4);
+    }
+
+    .effect-1 {
+        background: #D9D9D9;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .effect-2 {
+        background: #D9D9D9;
+        box-shadow: 0px 4px 28px rgba(78, 93, 228, 0.12);
+    }
+
+    .effect-3 {
+        filter: drop-shadow(0px 1px 30px rgba(85, 91, 229, 0.06));
+    }
+
+    .effect-4 {
+        box-shadow: 0px 1px 30px rgba(85, 91, 229, 0.06);
+    }
+
+    .effect-3 {
+        box-shadow: 0px 0px 24px rgba(78, 93, 228, 0.12);
+    }
+
+    .effect-3 {
+        box-shadow: 0px 0px 24px rgba(78, 93, 228, 0.12);
+    }
+
+    .box-shadow-1 {
+        background: #FFFFFF;
+        box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.05);
+    }
+
+    .box-shadow-2 {
+        background: #FFFFFF;
+        box-shadow: 0px 4px 40px rgba(14, 8, 84, 0.1);
+    }
+
+    .bg-primary-gradient {
+        background: linear-gradient(36.53deg, #FF9E0F 14.22%, #FF7C0F 85.72%);
+        position: relative;
+        z-index: 2;
+    }
+    select {
+        padding : 6px 0;
+        @apply text-primary-1 text-body-14 font-bold 
+    }
+    option {
+        @apply p-3 border border-gray-2 rounded-lg 
+    }
+
+}
