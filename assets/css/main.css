@@ -9,6 +9,13 @@
     }
 }
 
+@layer components {
+    .scroll-view::-webkit-scrollbar-track, 
+    .scroll-view::-webkit-scrollbar-thumb {
+       z-index: 50;
+    }
+}
+
 @layer utilities {
     /* heading text */
 
