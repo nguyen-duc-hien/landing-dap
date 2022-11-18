@@ -2,15 +2,14 @@
 module.exports = {
   content: ['./index.html', './**/*/.{html,js}'],
   theme: {
-    
     screens: {
       'sm': '576px',
       'md': '768px',
       'lg': '992px',
       'xl': '1200px',
       '2xl': '1440px',
+      '3xl':'1920px',
     },
-    // 1440 px ?
     container: {
       center: true,
       padding: {
@@ -20,9 +19,9 @@ module.exports = {
         lg: '80px',
         xl: '80px',
         '2xl': '140px',
+        '3xl':'320px',
       },
     },
-
     extend: {
       padding: {
         '15': '60px',
@@ -106,8 +105,7 @@ module.exports = {
           'body-18': ['18px', '28px'],
           'body-20': ['20px', '32px'],
       
-      },
-      
+      },   
     },   
   },
   plugins: [],

@@ -10,29 +10,32 @@
         rel="stylesheet">
     </link>
     <link href="./assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="./node_modules/@splidejs/splide/dist/css/splide.min.css">
+    <link href="./assets/css/custom.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- header -->
-    <div class="w-full h-[72px] bg-white py-4">
+    <div class="hidden md:block w-full h-[72px] bg-white py-4">
 
         <div class="container flex justify-between items-center">
             <!-- metadap logo -->
-            <div class="">
-                <img src="/assets/img/Logo-moi.svg" class="" alt="" />
+            <div>
+                <img src="/assets/img/Logo-moi.svg" class="w-full h-full lg:block hidden" alt="" />
+                <img src="/assets/img/logo-mobile.svg" class="w-full h-full block lg:hidden" alt="" />
             </div>
             <!-- navigation bar -->
-            <div class="flex w-[503px] justify-between items-center">
-                <a href="#" class="body-16-medium text-grey-700">
+            <div class="flex xl:w-[503px] justify-between items-center gap-4 lg:gap-6 xl:gap-0">
+                <a href="#" class="text-body-14 font-medium lg:body-16-medium text-grey-700">
                     Hệ sinh thái MetaDap
                 </a>
-                <a href="#" class="body-16-medium text-grey-700">
+                <a href="#" class="text-body-14 font-medium lg:body-16-medium text-grey-700">
                     Về chúng tôi
                 </a>
-                <a href="#" class="body-16-medium text-grey-700">
+                <a href="#" class="text-body-14 font-medium lg:body-16-medium text-grey-700">
                     Đối tác
                 </a>
-                <a href="#" class="body-16-medium text-grey-700">
+                <a href="#" class="text-body-14 font-medium lg:body-16-medium text-grey-700">
                     Tin tức
                 </a>
             </div>
@@ -57,57 +60,113 @@
             </div>
         </div>
     </div>
-
+    <!-- mobile header -->
+    <div class="flex justify-between z-30 md:hidden py-4 px-6 effect-4">
+        <img src="/assets/img/logo-mobile.svg" class="" alt="" />
+        <img src="/assets/img/3bar.svg" id="iconMenuMobile" class="cursor-pointer" alt="" />
+    </div>
+    <!-- menu mobile -->
+    <div class="fixed top-0 w-screen h-screen bg-white z-[50] hidden" id="menuMobile">
+        <div class="flex justify-between z-30 md:hidden py-4 pl-6 pr-10 effect-4">
+            <img src="/assets/img/logo-mobile.svg" class="" alt="" />
+            <img src="/assets/img/close.svg" id="iconCloseMenu" class="cursor-pointer" alt="" />
+        </div>
+        <!-- menu items -->
+        <div class="mt-5">
+            <!-- active class -->
+            <div class="border-l-4 border-primary-1 bg-warning-10 px-6 py-5 text-primary-1">
+                <span class="body-16-bold">Hệ sinh thái MetaDap</span>
+            </div>
+            <!-- default class -->
+            <div
+                class="border-l-4 border-transparent bg-white px-6 py-5 text-grey-500 hover:border-primary-1 hover:bg-warning-10 hover:text-primary-1">
+                <span class="body-16-bold">Về chúng tôi</span>
+            </div>
+            <div
+                class="border-l-4 border-transparent bg-white px-6 py-5 text-grey-500 hover:border-primary-1 hover:bg-warning-10 hover:text-primary-1">
+                <span class="body-16-bold">Đối tác</span>
+            </div>
+            <div
+                class="border-l-4 border-transparent bg-white px-6 py-5 text-grey-500 hover:border-primary-1 hover:bg-warning-10 hover:text-primary-1">
+                <span class="body-16-bold">Tin tức</span>
+            </div>
+        </div>
+    </div>
     <!-- body content -->
     <!-- banner metadap -->
-    <div class="bg-[url('/assets/img/Home-banner.png')] bg-cover bg-no-repeat h-[785px]">
-        <div class="container">
-            <div class="pt-[180px] w-1/2 flex flex-col">
-                <span class="heading-52 text-white">Nền tảng số hoá tài sản đầu tiên tại Việt Nam</span>
-                <span class="body-20-medium text-gray-4 mt-11 w-2/3">Cùng MetaDAP mở ra cánh cửa bước vào kỷ nguyên Kinh
-                    tế số</span>
+    <div class="bg-[#263959] z-10 bg-no-repeat bg-cover">
+        <div class="relative h-[713px] overflow-hidden">
+            <div class="container z-10 translate-y-[180px]">
+                <div class="flex flex-col sm:w-[75%] md:w-[55%] ">
+                    <span class="heading-h4 sm:text-heading-32 lg:text-heading-40 xl:text-heading-52 text-white">
+                        Nền tảng số hoá tài sản đầu tiên tại Việt Nam
+                    </span>
+                    <span class="body14-medium lg:body-20-medium text-gray-4 mt-4 lg:mt-11 lg:w-2/3">
+                        Cùng MetaDAP mở ra cánh cửa bước vào kỷ nguyên Kinh tế số
+                    </span>
+                </div>
+            </div>
+            <!-- person -->
+            <div
+                class="absolute bottom-0 right-0 scale-[1.1] sm:scale-75 xl:scale-90 2xl:scale-100 origin-bottom-right z-[5] ">
+                <img src="/assets/img/bg_banner_1.svg" class="w-full h-full" alt="banner" />
+            </div>
+            <!-- bottom left -->
+            <div
+                class="absolute -bottom-[5%] sm:bottom-0 -left-[95%] sm:-left-[30%] md:-left-[10%] lg:left-0 scale-75 xl:scale-90 2xl:scale-100 origin-bottom-left  z-[4]">
+                <img src="/assets/img/bg_banner_2.svg" class="w-full h-full" alt="banner" />
+            </div>
+            <!-- top right -->
+            <div class="absolute top-0 right-0 scale-75 xl:scale-90 2xl:scale-100 origin-top-right  z-[1]">
+                <img src="/assets/img/bg_banner_3.svg" class="w-full h-full" alt="banner" />
             </div>
         </div>
     </div>
 
     <!-- history metadap -->
     <div class="bg-[#F4F8FD]">
-        <div class="container flex gap-[135px] pt-[68px] pb-[106px] relative">
+        <div class="container lg:flex gap-12 lg:gap-[135px] pt-12 lg:pt-[68px] pb-10 lg:pb-[106px] relative overflow-x-hidden">
             <!-- images metadap history -->
-            <div class="w-[48%]">
+            <div class="w-full lg:w-[48%]">
                 <img src="/assets/img/history.svg" class="" alt="" />
             </div>
             <!-- metadap history content -->
-            <div class="w-[52%] flex flex-col z-[2]">
-                <span class="heading-h2 text-grey-700">MetaDAP được thành lập với sứ mệnh tiên phong, xây dựng một nền
-                    tảng số hóa tài sản hỗ trợ đa kết nối.</span>
-                <span class="body-20-medium text-grey-500 mt-2">Với phương châm hỗ trợ doanh nghiệp và thượng tôn Pháp
-                    luật, metaDAP được xây dựng dựa trên cốt lõi là Công nghệ “Enterprise blockchain” kết hợp với các
-                    Công nghệ khác như Big Data, Deep learning và VR/AR.</span>
+            <div class="w-full lg:w-[52%] flex flex-col mt-12 lg:mt-0 justify-center z-[2]">
+                <span class="body-20-bold lg:heading-h2 text-grey-700 w-2/3 lg:w-full">MetaDAP và Enterprise Blockchain
+                </span>
+                <span class="body-14-medium lg:body-20-medium text-grey-500 mt-2 z-[2]">Chúng tôi tin rằng Enterprise
+                    Blockchain phù hợp với môi trường Doanh nghiệp và các thể chế Chính trị hơn so với Public
+                    blockchain, chẳng hạn như Bitcoin.</span>
+                <span class="body-14-medium lg:body-20-medium text-grey-500 mt-6 z-[2]">
+                    Bên cạnh tính minh bạch và tự động hóa cao vốn có của Blockchain nói chung, Enterprise Blockchain
+                    được bổ sung năng lực chống gian lận và rửa tiền, giúp Doanh nghiệp xây dựng các cách thức kinh
+                    doanh mạch lạc/sáng tạo, hiệu quả và an toàn.</span>
 
-                <span class="heading-h4 text-grey-700 mt-8">Enterprise Blockchain</span>
-                <span class="body-18-medium text-grey-500 mt-3">Nhờ khả năng hỗ trợ quản lý, chống gian lận và rửa tiền,
-                    chúng tôi tin rằng Công nghệ này phù hợp với môi trường Doanh nghiệp và các thể chế Chính trị hơn so
-                    với loại “Public blockchain”, chẳng hạn như Bitcoin.</span>
             </div>
             <!-- floating illus -->
-            <img src="/assets/img/illus-history.svg" class="absolute left-[20%] bottom-[-5%]" alt="" />
-            <img src="/assets/img/illus-history-2.svg" class="absolute bottom-0 right-[-15%]" alt="" />
+            <img src="/assets/img/illus-history.svg" class="absolute left-0 lg:left-[20%] bottom-0 -z-1" alt="" />
+            <img src="/assets/img/illus-history-2.svg" class="hidden lg:block absolute -bottom-[5%] -right-[14%] " alt="" />
+            <img src="/assets/img/illus-history-2-mobile.svg" class="lg:hidden absolute bottom-[8%] -right-[8%] z-0" alt="" />
         </div>
     </div>
 
     <!-- ecosystem -->
-    <div class="bg-[#EFF1FD]">
-        <div class="container flex py-[84px] pb-[58px] gap-[264px]">
+    <div class="bg-[#EFF1FD] z-[2]">
+        <div class="container lg:flex py-[60px] lg:pt-[84px] lg:pb-[58px] gap-12 lg:gap-[264px]">
+            <!-- ecosystem images mobile -->
+            <div class="w-full lg:hidden">
+                <img src="/assets/img/ecosystem.svg" class="" alt="" />
+            </div>
             <!-- ecosystem content -->
-            <div class="w-2/5 flex flex-col justify-center">
-                <span class="heading-h2 text-grey-700">Hệ sinh thái</span>
-                <span class="body-20-medium text-grey-500 mt-6">Với hệ sinh thái rộng lớn, chúng tôi mong muốn đem đến
+            <div class="w-full lg:w-2/5 flex flex-col justify-center">
+                <span class="body-20-bold lg:heading-h2 text-grey-700">Hệ sinh thái</span>
+                <span class="body-14-medium lg:body-20-medium text-grey-500 mt-6">Với hệ sinh thái rộng lớn, chúng tôi
+                    mong muốn đem đến
                     cho thị trường những sản phẩm - dịch vụ theo tiêu chuẩn quốc tế và những trải nghiệm hoàn toàn mới
                     về giao dịch số.</span>
             </div>
             <!-- ecosystem images -->
-            <div class="">
+            <div class="hidden lg:block">
                 <img src="/assets/img/ecosystem.svg" class="" alt="" />
             </div>
         </div>
@@ -115,243 +174,390 @@
 
     <!-- our teams -->
 
-    <div class="relative bg-[#F4F8FD]">
-        <div class="flex justify-center py-[120px]">
-            <div class=" max-w-[739px] ">
+    <div class="relative bg-[#F4F8FD]  pt-[56px] pb-[110px] lg:py-[120px]">
+        <div class="flex justify-center">
+            <div class="max-w-full lg:max-w-[739px]">
                 <!-- out team title -->
-                <div class="text-center"><span class="heading-h2 text-grey-700">Đội ngũ của chúng tôi</span></div>
-                <!-- row 1 -->
-                <div class="flex gap-20 mt-[60px]">
-                    <div class="flex flex-col w-[193px]">
-                        <img src="/assets/img/member-1.png" class="" alt="" />
-                        <span class="body-18-bold text-grey-800 text-center w-full mt-6">Jerome Bell</span>
-                        <span class="body-14-medium text-grey-500  text-center w-full mt-3">Co founder, Chairman,
+                <div class="text-center"><span class="body-20-bold lg:heading-h2 text-grey-700">Đội ngũ của chúng
+                        tôi</span></div>
+
+                <!-- our team desktop -->
+                <!-- grid view-->
+                <div class="hidden lg:grid lg:grid-cols-3 gap-5 lg:gap-20 mt-6 lg:mt-[60px] w-fit z-[2]">
+                    <div class="flex flex-col items-center max-w-[144px] lg:max-w-[193px] z-[2]">
+                        <img src="/assets/img/teams-1.png" class="max-w-[120px] lg:max-w-[172px]" alt="" />
+                        <span class="body-16-bold lg:body-18-bold text-grey-800 text-center w-full mt-4 lg:mt-6">Trần
+                            Quý</span>
+                        <span
+                            class="body-12-regular lg:body-14-medium text-grey-500  text-center w-full mt-1 lg:mt-3">Co
+                            founder, Chairman,
                             Executive Director</span>
                     </div>
-                    <div class="flex flex-col w-[193px]">
-                        <img src="/assets/img/member-1.png" class="" alt="" />
-                        <span class="body-18-bold text-grey-800 text-center w-full mt-6">Jerome Bell</span>
-                        <span class="body-14-medium text-grey-500  text-center w-full mt-3">Co founder, Chairman,
+                    <div class="flex flex-col items-center max-w-[144px] lg:max-w-[193px] z-[2]">
+                        <img src="/assets/img/teams-2.png" class="max-w-[120px] lg:max-w-[172px]" alt="" />
+                        <span class="body-16-bold lg:body-18-bold text-grey-800 text-center w-full mt-4 lg:mt-6">Trần
+                            Quốc Việt</span>
+                        <span
+                            class="body-12-regular lg:body-14-medium text-grey-500  text-center w-full mt-1 lg:mt-3">Co
+                            founder, Chairman,
                             Executive Director</span>
                     </div>
-                    <div class="flex flex-col w-[193px]">
-                        <img src="/assets/img/member-1.png" class="" alt="" />
-                        <span class="body-18-bold text-grey-800 text-center w-full mt-6">Jerome Bell</span>
-                        <span class="body-14-medium text-grey-500  text-center w-full mt-3">Co founder, Chairman,
+                    <div class="flex flex-col items-center max-w-[144px] lg:max-w-[193px] z-[2]">
+                        <img src="/assets/img/teams-3.png" class="max-w-[120px] lg:max-w-[172px]" alt="" />
+                        <span class="body-16-bold lg:body-18-bold text-grey-800 text-center w-full mt-4 lg:mt-6">Đặng
+                            Thị Kiên Giang</span>
+                        <span
+                            class="body-12-regular lg:body-14-medium text-grey-500  text-center w-full mt-1 lg:mt-3">Co
+                            founder, Chairman,
+                            Executive Director</span>
+                    </div>
+                    <div class="flex flex-col items-center max-w-[144px] lg:max-w-[193px] z-[2]">
+                        <img src="/assets/img/teams-4.png" class="max-w-[120px] lg:max-w-[172px]" alt="" />
+                        <span class="body-16-bold lg:body-18-bold text-grey-800 text-center w-full mt-4 lg:mt-6">Hà
+                            Thảo Vi</span>
+                        <span
+                            class="body-12-regular lg:body-14-medium text-grey-500  text-center w-full mt-1 lg:mt-3">Co
+                            founder, Chairman,
+                            Executive Director</span>
+                    </div>
+                    <div class="flex flex-col items-center max-w-[144px] lg:max-w-[193px] z-[2]">
+                        <img src="/assets/img/teams-5.png" class="max-w-[120px] lg:max-w-[172px]" alt="" />
+                        <span class="body-16-bold lg:body-18-bold text-grey-800 text-center w-full mt-4 lg:mt-6">Hồ
+                            An</span>
+                        <span
+                            class="body-12-regular lg:body-14-medium text-grey-500  text-center w-full mt-1 lg:mt-3">Co
+                            founder, Chairman,
+                            Executive Director</span>
+                    </div>
+                    <div class="flex flex-col items-center max-w-[144px] lg:max-w-[193px] z-[2]">
+                        <img src="/assets/img/teams-6.png" class="max-w-[120px] lg:max-w-[172px]" alt="" />
+                        <span class="body-16-bold lg:body-18-bold text-grey-800 text-center w-full mt-4 lg:mt-6">Đinh
+                            Mỹ Hằng</span>
+                        <span
+                            class="body-12-regular lg:body-14-medium text-grey-500  text-center w-full mt-1 lg:mt-3">Co
+                            founder, Chairman,
                             Executive Director</span>
                     </div>
                 </div>
-                <!-- row-2 -->
-                <div class="flex gap-20 mt-20">
-                    <div class="flex flex-col w-[193px]">
-                        <img src="/assets/img/member-1.png" class="" alt="" />
-                        <span class="body-18-bold text-grey-800 text-center w-full mt-6">Jerome Bell</span>
-                        <span class="body-14-medium text-grey-500  text-center w-full mt-3">Co founder, Chairman,
-                            Executive Director</span>
+
+                <!-- our team mobile -->
+                <section id="teamSplide" class="splide lg:hidden mt-4 z-[2]" aria-label="new Partner">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <div class="flex flex-col items-center max-w-[144px] lg:max-w-[193px] z-[2]">
+                                    <img src="/assets/img/teams-1.png" class="max-w-[120px] lg:max-w-[172px]" alt="" />
+                                    <span
+                                        class="body-16-bold lg:body-18-bold text-grey-800 text-center w-full mt-4 lg:mt-6">Trần
+                                        Quý</span>
+                                    <span
+                                        class="body-12-regular lg:body-14-medium text-grey-500  text-center w-full mt-1 lg:mt-3">Co
+                                        founder, Chairman,
+                                        Executive Director</span>
+                                </div>
+
+                            </li>
+                            <li class="splide__slide">
+                                <div class="flex flex-col items-center max-w-[144px] lg:max-w-[193px] z-[2]">
+                                    <img src="/assets/img/teams-2.png" class="max-w-[120px] lg:max-w-[172px]" alt="" />
+                                    <span
+                                        class="body-16-bold lg:body-18-bold text-grey-800 text-center w-full mt-4 lg:mt-6">Trần
+                                        Quốc Việt</span>
+                                    <span
+                                        class="body-12-regular lg:body-14-medium text-grey-500  text-center w-full mt-1 lg:mt-3">Co
+                                        founder, Chairman,
+                                        Executive Director</span>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="flex flex-col items-center max-w-[144px] lg:max-w-[193px] z-[2]">
+                                    <img src="/assets/img/teams-3.png" class="max-w-[120px] lg:max-w-[172px]" alt="" />
+                                    <span
+                                        class="body-16-bold lg:body-18-bold text-grey-800 text-center w-full mt-4 lg:mt-6">Đặng
+                                        T. Kiên Giang</span>
+                                    <span
+                                        class="body-12-regular lg:body-14-medium text-grey-500  text-center w-full mt-1 lg:mt-3">Co
+                                        founder, Chairman,
+                                        Executive Director</span>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="flex flex-col items-center max-w-[144px] lg:max-w-[193px] z-[2]">
+                                    <img src="/assets/img/teams-4.png" class="max-w-[120px] lg:max-w-[172px]" alt="" />
+                                    <span
+                                        class="body-16-bold lg:body-18-bold text-grey-800 text-center w-full mt-4 lg:mt-6">Hà
+                                        Thảo Vi</span>
+                                    <span
+                                        class="body-12-regular lg:body-14-medium text-grey-500  text-center w-full mt-1 lg:mt-3">Co
+                                        founder, Chairman,
+                                        Executive Director</span>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="flex flex-col items-center max-w-[144px] lg:max-w-[193px] z-[2]">
+                                    <img src="/assets/img/teams-5.png" class="max-w-[120px] lg:max-w-[172px]" alt="" />
+                                    <span
+                                        class="body-16-bold lg:body-18-bold text-grey-800 text-center w-full mt-4 lg:mt-6">Hồ
+                                        An</span>
+                                    <span
+                                        class="body-12-regular lg:body-14-medium text-grey-500  text-center w-full mt-1 lg:mt-3">Co
+                                        founder, Chairman,
+                                        Executive Director</span>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="flex flex-col items-center max-w-[144px] lg:max-w-[193px] z-[2]">
+                                    <img src="/assets/img/teams-6.png" class="max-w-[120px] lg:max-w-[172px]" alt="" />
+                                    <span
+                                        class="body-16-bold lg:body-18-bold text-grey-800 text-center w-full mt-4 lg:mt-6">Đinh
+                                        Mỹ Hằng</span>
+                                    <span
+                                        class="body-12-regular lg:body-14-medium text-grey-500  text-center w-full mt-1 lg:mt-3">Co
+                                        founder, Chairman,
+                                        Executive Director</span>
+                                </div>
+                            </li>
+
+                        </ul>
                     </div>
-                    <div class="flex flex-col w-[193px]">
-                        <img src="/assets/img/member-1.png" class="" alt="" />
-                        <span class="body-18-bold text-grey-800 text-center w-full mt-6">Jerome Bell</span>
-                        <span class="body-14-medium text-grey-500  text-center w-full mt-3">Co founder, Chairman,
-                            Executive Director</span>
-                    </div>
-                    <div class="flex flex-col w-[193px]">
-                        <img src="/assets/img/member-1.png" class="" alt="" />
-                        <span class="body-18-bold text-grey-800 text-center w-full mt-6">Jerome Bell</span>
-                        <span class="body-14-medium text-grey-500  text-center w-full mt-3">Co founder, Chairman,
-                            Executive Director</span>
-                    </div>
-                </div>
+                </section>
+
             </div>
             <!-- floating illus -->
-            <img src="/assets/img/illus-our-team.svg" class="absolute left-0 bottom-[-20%]" alt="" />
+            <img src="/assets/img/illus-our-team.svg"
+                class="absolute -left-[4%] -bottom-[19%] md:-left-[5%] lg:left-0 sm:-bottom-[36%] lg:bottom-[-20%] -z-1" alt="" />
         </div>
     </div>
 
     <!-- mission and vision -->
 
-    <div class="flex relative bg-[#F4F8FD]">
-        <div class="w-1/2 ml-[140px] pt-[72px] pb-[86px]">
-            <!-- title -->
-            <div class="">
-                <span class="heading-h2 text-grey-700 z-[2]">Sứ mệnh & Tầm nhìn</span>
-            </div>
-            <!-- scope -->
-            <div class="flex mt-8">
-                <div class="min-w-[72px]">
-                    <img src="/assets/img/scope.svg" class="w-[72px] h-[72px]" alt="" />
+    <div class="bg-[#F4F8FD]">
+        <div class="container lg:flex relative ">
+            <div class="w-full lg:w-1/2 lg:pt-[72px] lg:pb-[86px] lg:pr-[71px]">
+                <!-- title -->
+                <div class="">
+                    <span class="body-20-bold lg:heading-h2 text-grey-700 z-[2]">Sứ mệnh & Tầm nhìn</span>
                 </div>
-                <div class="flex flex-col pl-6">
-                    <span class="heading-h4 text-grey-700">Sứ mệnh</span>
-                    <span class="body-18-medium text-grey-500 mt-3">MetaDap đi theo triết lý đơn giản nhưng chặt chẽ. Đó
-                        là cống hiến tài năng và công nghệ của mình để mang lại những sản phẩm và dịch vụ vượt trội ,
-                        góp phần xây dựng một thế giới tốt đẹp hơn.</span>
+                <!-- scope -->
+                <div class="flex-col lg:flex mt-8">
+                    <div class="min-w-[72px]">
+                        <img src="/assets/img/ongnhom.svg" class="w[48px] h-[48px] lg:w-[72px] lg:h-[72px]" alt="" />
+
+                    </div>
+                    <div class="flex flex-col lg:pl-6">
+                        <span class="body-20-bold lg:heading-h4 text-grey-700 mt-3 lg:mt-0">Tầm nhìn</span>
+                        <span class="body-14-regular lg:body-18-regular text-grey-500 mt-2 lg:mt-3 text-justify">Thế
+                            giới
+                            đang mạnh mẽ bước vào kỷ
+                            nguyên số và
+                            đa
+                            kết nối, hàng loạt mô hình kinh doanh sáng tạo sẽ được tạo ra để thay thế dần các mô hình
+                            truyền
+                            thống đang dần trở nên bất tiện, chậm chạp và thiếu an toàn.</span>
+                    </div>
                 </div>
-            </div>
-            <!-- score -->
-            <div class="flex mt-12">
-                <div class="min-w-[72px]">
-                    <img src="/assets/img/ongnhom.svg" class="w-[72px] h-[72px]" alt="" />
+                <!-- score -->
+                <div class="flex-col lg:flex mt-4 lg:mt-12">
+                    <div class="min-w-[72px]">
+                        <img src="/assets/img/scope.svg" class="w[48px] h-[48px] lg:w-[72px] lg:h-[72px]" alt="" />
+                    </div>
+                    <div class="flex flex-col lg:pl-6">
+                        <span class="body-20-bold lg:heading-h4 text-grey-700 mt-3 lg:mt-0">Sứ mệnh</span>
+                        <span class="body-14-regular lg:body-18-regular text-grey-500 mt-2 lg:mt-3 text-justify">MetaDap
+                            đi theo triết lý đơn giản
+                            nhưng chặt
+                            chẽ. Đó
+                            là cống hiến tài năng và công nghệ của mình để mang lại những sản phẩm và dịch vụ vượt trội
+                            ,
+                            góp phần xây dựng một thế giới tốt đẹp hơn.</span>
+
+                    </div>
                 </div>
-                <div class="flex flex-col pl-6">
-                    <span class="heading-h4 text-grey-700">Tầm nhìn</span>
-                    <span class="body-18-medium text-grey-500 mt-3">Thế giới đang mạnh mẽ bước vào kỷ nguyên số và đa
-                        kết nối, hàng loạt mô hình kinh doanh sáng tạo sẽ được tạo ra để thay thế dần các mô hình truyền
-                        thống đang dần trở nên bất tiện, chậm chạp và thiếu an toàn.</span>
-                </div>
-            </div>
 
 
-        </div>
-        <!-- illus right -->
-        <div class="w-1/2 mr-[54px]">
-            <img src="/assets/img/mision-vision.svg" class="" alt="" />
+            </div>
+            <!-- illus right -->
+            <div class="w-full lg:w-1/2 lg:mr-[54px]">
+                <img src="/assets/img/mision-vision.svg" class="" alt="" />
+            </div>
         </div>
         <!-- floating illus -->
-        <img src="/assets/img/wave.svg" class="absolute left-[40%] bottom-0" alt="" />
+        <img src="/assets/img/wave.svg" class="hidden lg:absolute left-[40%] bottom-0" alt="" />
     </div>
 
-    <!-- partner and customer -->
-    <div class="py-[120px] relative bg-[#F4F8FD]">
+    <!-- partner and customer desktop -->
+    <div class="pt-[72px] lg:py-[120px] relative bg-[#F4F8FD]">
+        <!-- floating illus -->
+        <img src="/assets/img/partner-orange.svg"
+            class="absolute left-0 -bottom-[25%] md:bottom-[5%] scale-50 md:scale-100 origin-bottom-left" alt="" />
+        <img src="/assets/img/partner-purple.svg"
+            class="absolute right-0 bottom-[25%] md:bottom-[30%] scale-[0.3] md:scale-100 origin-bottom-right" alt="" />
         <!-- title -->
         <div class="w-full text-center">
-            <span class="heading-h2 text-grey-700">Đối tác và Khách hàng</span>
+            <span class="body-20-bold lg:heading-h2 text-grey-700 z-10">Đối tác và Khách hàng</span>
         </div>
         <!-- subtitle -->
-        <div class="w-full text-center mt-3">
-            <span class="body-18-medium text-grey-600">Chúng tôi đã có cơ hội hợp tác với hơn 100 khách hàng</span>
+        <div class="w-full text-center mt-1 lg:mt-3">
+            <span class="body-12-medium lg:body-18-medium text-grey-600 z-10">Chúng tôi đã có cơ hội hợp tác với hơn 100
+                khách hàng</span>
         </div>
 
         <!-- partner phase 1 -->
-        <div class="flex flex-wrap justify-center gap-8 mt-10">
+        <div
+            class="container hidden lg:flex lg:flex-wrap lg:justify-center gap-4 lg:gap-8 mt-4 lg:mt-10 scroll-view overflow-x-auto z-[2]">
             <img src="/assets/img/vide.svg" class="" alt="" />
             <img src="/assets/img/incubator.svg" class="" alt="" />
             <img src="/assets/img/metauni.svg" class="" alt="" />
             <img src="/assets/img/vse.svg" class="" alt="" />
-        </div>
-        <!-- partner phase 2 -->
-        <div class="flex flex-wrap justify-center gap-8 mt-8">
             <img src="/assets/img/kinhte.svg" class="" alt="" />
             <img src="/assets/img/law.svg" class="" alt="" />
             <img src="/assets/img/invest.svg" class="" alt="" />
             <img src="/assets/img/rkg.svg" class="" alt="" />
-        </div>
-        <!-- partner phase 3 -->
-        <div class="flex flex-wrap justify-center gap-8 mt-8">
             <img src="/assets/img/reesoft.svg" class="" alt="" />
             <img src="/assets/img/metalife.svg" class="" alt="" />
         </div>
 
-        <!-- floating illus -->
-        <img src="/assets/img/partner-orange.svg" class="absolute left-0 bottom-[5%]" alt="" />
-        <img src="/assets/img/partner-purple.svg" class="absolute right-0 bottom-[30%]" alt="" />
-    </div>
+        <section id="partnerSplide" class="splide lg:hidden mt-4" aria-label="Splide Partner">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <div class="flex flex-col gap-4">
+                            <img src="/assets/img/vide.svg" class="" alt="" />
+                            <img src="/assets/img/incubator.svg" class="" alt="" />
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="flex flex-col gap-4">
+                            <img src="/assets/img/metauni.svg" class="" alt="" />
+                            <img src="/assets/img/vse.svg" class="" alt="" />
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="flex flex-col gap-4">
+                            <img src="/assets/img/kinhte.svg" class="" alt="" />
+                            <img src="/assets/img/law.svg" class="" alt="" />
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="flex flex-col gap-4">
+                            <img src="/assets/img/invest.svg" class="" alt="" />
+                            <img src="/assets/img/rkg.svg" class="" alt="" />
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="flex flex-col gap-4">
+                            <img src="/assets/img/reesoft.svg" class="" alt="" />
+                            <img src="/assets/img/metalife.svg" class="" alt="" />
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
+    </div>
 
     <!-- news -->
 
-    <div class="pt-[120px] pb-[222px] -z-[2] bg-[#F4F8FD]">
+    <div class="pt-20 lg:pt-[120px] pb-[88px] lg:pb-[222px] -z-[2] bg-[#F4F8FD] overflow-hidden">
         <div class="relative z-10">
             <!-- title -->
             <div class="w-full text-center">
-                <span class="heading-h2 text-grey-700">Tin tức Sự kiện</span>
+                <span class="body-20-bold lg:heading-h2 text-grey-700">Tin tức Sự kiện</span>
             </div>
 
             <!-- scroll news  -->
-            <div class="scroll-view max-w-full pl-[90px] mt-[60px] z-[10] overflow-x-auto pb-6">
-                <div class="gap-8 flex w-fit">
-                    <!-- news-1 -->
-                    <a href="https://www.qtsc.com.vn/tin-tuc/vnito-2021-phien-hoi-thao-so-2-bat-dong-san-so-xu-the-moi-co-hoi-moi-van-hoi-moi?fbclid=IwAR2UGzGCZIozDIKc1k3SXZT6LVwWt4IXplvP6DRID6fvHSzBKCnkwkRlvaY"
-                        class="w-[527px] p-10 rounded-3xl bg-white z-[2]">
-                        <div class="flex flex-col">
-                            <img src="/assets/img/news-1.png" class="rounded-lg" alt="" />
-                            <span class="heading-h4 text-black mt-8">[VNITO 2021] Phiên hội thảo số 2: "Bất động sản số
-                                - Xu
-                                thế mới, Cơ hội mới, Vận hội mới"</span>
-                            <span class="body-16-medium text-grey-5 mt-2">06/10/2022</span>
-                        </div>
-                    </a>
-                    <!-- news-2 -->
-                    <a href="http://hangthat.thuonghieucongluan.com.vn/cong-nghe-blockchain-se-thay-doi-tuong-lai-cua-he-thong-ngan-hang-a92646.html"
-                        class="w-[527px] p-10 rounded-3xl bg-white  z-[2]">
-                        <div class="flex flex-col">
-                            <img src="/assets/img/news-1.png" class="rounded-lg" alt="" />
-                            <span class="heading-h4 text-black mt-8">[VNITO 2021] Phiên hội thảo số 2: "Bất động sản số
-                                - Xu
-                                thế mới, Cơ hội mới, Vận hội mới"</span>
-                            <span class="body-16-medium text-grey-5 mt-2">06/10/2022</span>
-                        </div>
-                    </a>
-                    <!-- news-3 -->
-                    <a href="https://viettimes.vn/ra-mat-lang-blockchain-va-toa-dam-tiem-nang-va-thach-thuc-trong-xay-dung-he-st-khoi-nghiep-vn-post161695.html"
-                        class="w-[527px] p-10 rounded-3xl bg-white  z-[2]">
-                        <div class="flex flex-col">
-                            <img src="/assets/img/news-1.png" class="rounded-lg" alt="" />
-                            <span class="heading-h4 text-black mt-8">[VNITO 2021] Phiên hội thảo số 2: "Bất động sản số
-                                - Xu
-                                thế mới, Cơ hội mới, Vận hội mới"</span>
-                            <span class="body-16-medium text-grey-5 mt-2">06/10/2022</span>
-                        </div>
-                    </a>
-                    <!-- news-4 -->
-                    <a href="https://viettimes.vn/ra-mat-lang-blockchain-va-toa-dam-tiem-nang-va-thach-thuc-trong-xay-dung-he-st-khoi-nghiep-vn-post161695.html"
-                        class="w-[527px] p-10 rounded-3xl bg-white  z-[2]">
-                        <div class="flex flex-col">
-                            <img src="/assets/img/news-1.png" class="rounded-lg" alt="" />
-                            <span class="heading-h4 text-black mt-8">[VNITO 2021] Phiên hội thảo số 2: "Bất động sản số
-                                - Xu
-                                thế mới, Cơ hội mới, Vận hội mới"</span>
-                            <span class="body-16-medium text-grey-5 mt-2">06/10/2022</span>
-                        </div>
-                    </a>
+
+            <section id="newSplide" class="splide mt-4" aria-label="new Partner">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <div class="max-w-[258px] lg:max-w-[527px] p-5 lg:p-10 rounded-3xl bg-white z-[2]">
+                                <div class="flex flex-col">
+                                    <img src="/assets/img/news-1.png" class="rounded-lg" alt="" />
+                                    <span class="body-14-bold lg:heading-h4 text-black mt-4 lg:mt-8">MetaDap trở thành
+                                        đối tác
+                                        cao cấp của RTX từ năm 2022 1</span>
+                                    <span
+                                        class="body-12-medium lg:body-16-medium text-grey-5 mt-1 lg:mt-2">06/10/2022</span>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li class="splide__slide">
+                            <div class="max-w-[258px] lg:max-w-[527px] p-5 lg:p-10 rounded-3xl bg-white z-[2]">
+                                <div class="flex flex-col">
+                                    <img src="/assets/img/news-1.png" class="rounded-lg" alt="" />
+                                    <span class="body-14-bold lg:heading-h4 text-black mt-4 lg:mt-8">MetaDap trở thành
+                                        đối tác
+                                        cao cấp của RTX từ năm 2022 2</span>
+                                    <span
+                                        class="body-12-medium lg:body-16-medium text-grey-5 mt-1 lg:mt-2">06/10/2022</span>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="max-w-[258px] lg:max-w-[527px] p-5 lg:p-10 rounded-3xl bg-white z-[2]">
+                                <div class="flex flex-col justify-center">
+                                    <img src="/assets/img/news-1.png" class="rounded-lg" alt="" />
+                                    <span class="body-14-bold lg:heading-h4 text-black mt-4 lg:mt-8">MetaDap trở thành
+                                        đối tác
+                                        cao cấp của RTX từ năm 2022 3</span>
+                                    <span
+                                        class="body-12-medium lg:body-16-medium text-grey-5 mt-1 lg:mt-2">06/10/2022</span>
+                                </div>
+
+                            </div>
+                        </li>
+
+                    </ul>
                 </div>
-            </div>
+            </section>
 
             <!-- floating illus -->
             <img src="/assets/img/illus-news.svg" class="absolute left-[-3%] top-0 -z-[1]" alt="" />
         </div>
-
     </div>
 
-
     <!-- footers -->
-
-    <div class="bg-[url('/assets/img/footer.png')]  bg-cover bg-no-repeat h-[460px] pt-[96px] pb-[150px]">
-        <div class="container flex justify-between">
+    <div class="bg-[url('/assets/img/footer-mobile.svg')] lg:bg-[url('/assets/img/footer.png')] bg-cover bg-no-repeat h-fit lg:h-[460px]  lg:pt-[96px] lg:pb-[150px] py-6">
+        <div class="container flex flex-wrap md:flex-nowrap justify-between">
             <!-- logo and social -->
-            <div class="flex flex-col">
-                <a href="/"><img src="/assets/img/Logo-moi.svg" class="" alt="" /></a>
-                <div class="flex mt-[42px] gap-6">
-                    <a href="/"><img src="/assets/img/fb.svg" class="" alt="" /></a>
-                    <a href="/"><img src="/assets/img/ins.svg" class="" alt="" /></a>
-                    <a href="/"><img src="/assets/img/twiter.svg" class="" alt="" /></a>
+            <div class="flex flex-col w-full lg:w-[311px]">
+                <a href="/"><img src="/assets/img/Logo-moi-footer.svg" class="" alt="" /></a>
+                <div class="flex mt-3 lg:mt-[42px] gap-4 lg:gap-6">
+                    <a href="/"><img src="/assets/img/fb.svg" class="w-8 h-8 lg:w-[50px] lg:h-[50px]" alt="" /></a>
+                    <a href="/"><img src="/assets/img/ins.svg" class="w-8 h-8 lg:w-[50px] lg:h-[50px]" alt="" /></a>
+                    <a href="/"><img src="/assets/img/twiter.svg" class="w-8 h-8 lg:w-[50px] lg:h-[50px]" alt="" /></a>
                 </div>
             </div>
             <!-- tag name and link -->
-            <div class="flex flex-col w-[311px]">
-                <a href="#" class="body-16-medium text-primary-1 ">Hệ sinh thái MetaDap</a>
-                <a href="#" class="body-16-medium text-primary-1 mt-3">Về chúng tôi</a>
-                <a href="#" class="body-16-medium text-primary-1 mt-3">Đối tác</a>
-                <a href="#" class="body-16-medium text-primary-1 mt-3">Tin tức</a>
+            <div class="flex flex-col w-full lg:w-[311px] mt-8 md:mt-0">
+                <a href="#" class="body-14-bold lg:body-16-medium text-primary-1 ">Hệ sinh thái MetaDap</a>
+                <a href="#" class="body-14-bold lg:body-16-medium text-white mt-3">Về chúng tôi</a>
+                <a href="#" class="body-14-bold lg:body-16-medium text-white mt-3">Đối tác</a>
+                <a href="#" class="body-14-bold lg:body-16-medium text-white mt-3">Tin tức</a>
             </div>
 
             <!-- my infomation -->
-            <div class="flex flex-col w-[311px]">
+            <div class="flex flex-col w-full lg:w-[311px] mt-8 md:mt-0">
                 <span class="body-20-bold text-grey-50">Hệ sinh thái MetaDap</span>
-                <span class="body-16-medium text-grey-50 mt-3">Địa chỉ: T1-B27.08 khu Masteri - 159 Xa Lộ
+                <span class="body-12-medium lg:body-16-medium text-grey-50 mt-3">Địa chỉ: T1-B27.08 khu Masteri - 159 Xa Lộ
                     Hà Nội, phường Thảo Điền, Thành phố
                     Thủ Đức, Thành phố Hồ Chí Minh</span>
-                <span class="body-16-medium text-grey-50 mt-4">Điện thoại: <a href="#"
+                <span class="body-12-medium lg:body-16-medium text-grey-50 mt-4">Điện thoại: <a href="#"
                         className="">0919696000</a></span>
-                <span class="body-16-medium text-grey-50 mt-4">Email: <a href="#" className="">info@vide.vn</a></span>
+                <span class="body-12-medium lg:body-16-medium text-grey-50 mt-4">Email: <a href="#" className="">info@vide.vn</a></span>
             </div>
 
 
         </div>
     </div>
 
-
-
+    <!-- lib js -->
+    <script src="./node_modules/@splidejs/splide/dist/js/splide.js"></script>
+    <!-- custom JS -->
+    <script src="./assets/js/custom.js"></script>
 
 
 </body>
