@@ -194,4 +194,11 @@
         @apply p-3 border border-gray-2 rounded-lg 
     }
 
+    .clip-2-line {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+     
 }

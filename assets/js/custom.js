@@ -32,7 +32,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
         perPage: 3,
         breakpoints: {
             525: {
-                perPage: 1.4,
+                perPage: 1.5,
             },
       },
         autoplay: true,
