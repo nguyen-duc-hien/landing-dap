@@ -55,3 +55,14 @@ iconCloseMenu.addEventListener('click', () => {
     body.classList.remove('overflow-hidden');
     menuMobile.classList.add('hidden');
 })
+
+
+// modal languagle
+let buttonLanguage = document.getElementById("buttonLanguage");
+let labelLanguage = document.getElementById("labelLanguage");
+
+buttonLanguage.addEventListener('click', () => {
+    labelLanguage.classList.toggle('hidden');
+})
+
+// toggle button dark

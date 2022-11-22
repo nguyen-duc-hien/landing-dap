@@ -574,7 +574,7 @@ html {
   }
 }
 
-.scroll-view::-webkit-scrollbar-track, 
+.scroll-view::-webkit-scrollbar-track,
     .scroll-view::-webkit-scrollbar-thumb {
   z-index: 50;
 }
@@ -591,8 +591,8 @@ html {
   position: relative;
 }
 
-.top-20 {
-  top: 5rem;
+.top-10 {
+  top: 2.5rem;
 }
 
 .top-0 {
@@ -1060,14 +1060,6 @@ html {
   padding-bottom: 1.5rem;
 }
 
-.pl-6 {
-  padding-left: 1.5rem;
-}
-
-.pr-10 {
-  padding-right: 2.5rem;
-}
-
 .pt-12 {
   padding-top: 3rem;
 }
@@ -1246,7 +1238,7 @@ html {
 }
 
 select {
-  padding : 6px 0;
+  padding: 6px 0;
   font-size: 14px;
   line-height: 20px;
   font-weight: 700;
@@ -1268,6 +1260,8 @@ option {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* toggle sun light icon */
 
 .hover\:border-primary-1:hover {
   --tw-border-opacity: 1;
@@ -1678,10 +1672,6 @@ option {
 }
 
 @media (min-width: 1200px) {
-  .xl\:top-14 {
-    top: 3.5rem;
-  }
-
   .xl\:w-\[503px\] {
     width: 503px;
   }
