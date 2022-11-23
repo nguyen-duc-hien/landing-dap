@@ -599,8 +599,8 @@ html {
   top: 0px;
 }
 
-.bottom-0 {
-  bottom: 0px;
+.-bottom-\[2\%\] {
+  bottom: -2%;
 }
 
 .right-0 {
@@ -619,12 +619,20 @@ html {
   left: 0px;
 }
 
-.-bottom-\[9\%\] {
-  bottom: -9%;
+.bottom-0 {
+  bottom: 0px;
+}
+
+.-bottom-\[10\%\] {
+  bottom: -10%;
 }
 
 .-right-\[14\%\] {
   right: -14%;
+}
+
+.bottom-\[18\%\] {
+  bottom: 18%;
 }
 
 .-right-\[8\%\] {
@@ -716,16 +724,16 @@ html {
   margin-top: 1rem;
 }
 
-.mt-12 {
-  margin-top: 3rem;
-}
-
 .mt-2 {
   margin-top: 0.5rem;
 }
 
 .mt-6 {
   margin-top: 1.5rem;
+}
+
+.mt-12 {
+  margin-top: 3rem;
 }
 
 .mt-1 {
@@ -798,8 +806,8 @@ html {
   width: 100vw;
 }
 
-.w-\[85\%\] {
-  width: 85%;
+.w-3\/5 {
+  width: 60%;
 }
 
 .w-fit {
@@ -813,6 +821,22 @@ html {
 
 .w-\[70\%\] {
   width: 70%;
+}
+
+.w-4\/5 {
+  width: 80%;
+}
+
+.w-\[\] {
+  width: ;
+}
+
+.w-\[75\%\] {
+  width: 75%;
+}
+
+.w-\[85\%\] {
+  width: 85%;
 }
 
 .min-w-\[72px\] {
@@ -847,14 +871,14 @@ html {
   transform-origin: top right;
 }
 
-.translate-y-\[80px\] {
-  --tw-translate-y: 80px;
+.translate-y-\[60px\] {
+  --tw-translate-y: 60px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.scale-\[1\.1\] {
-  --tw-scale-x: 1.1;
-  --tw-scale-y: 1.1;
+.scale-100 {
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -910,6 +934,10 @@ html {
 
 .gap-2 {
   gap: 0.5rem;
+}
+
+.gap-8 {
+  gap: 2rem;
 }
 
 .gap-12 {
@@ -980,9 +1008,9 @@ html {
   background-color: rgb(255 246 229 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#263959\] {
+.bg-\[\#17366C\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(38 57 89 / var(--tw-bg-opacity));
+  background-color: rgb(23 54 108 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#F4F8FD\] {
@@ -1050,6 +1078,11 @@ html {
   padding-bottom: 1.25rem;
 }
 
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
 .py-\[60px\] {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -1060,16 +1093,12 @@ html {
   padding-bottom: 1.5rem;
 }
 
-.pt-12 {
-  padding-top: 3rem;
+.pt-\[56px\] {
+  padding-top: 56px;
 }
 
 .pb-\[110px\] {
   padding-bottom: 110px;
-}
-
-.pt-\[56px\] {
-  padding-top: 56px;
 }
 
 .pt-\[72px\] {
@@ -1289,8 +1318,8 @@ option {
 }
 
 @media (min-width: 576px) {
-  .sm\:bottom-0 {
-    bottom: 0px;
+  .sm\:-bottom-\[10\%\] {
+    bottom: -10%;
   }
 
   .sm\:-left-\[30\%\] {
@@ -1305,9 +1334,9 @@ option {
     width: 75%;
   }
 
-  .sm\:scale-75 {
-    --tw-scale-x: .75;
-    --tw-scale-y: .75;
+  .sm\:scale-\[65\%\] {
+    --tw-scale-x: 65%;
+    --tw-scale-y: 65%;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
@@ -1346,8 +1375,8 @@ option {
     display: none;
   }
 
-  .md\:w-\[55\%\] {
-    width: 55%;
+  .md\:w-\[50\%\] {
+    width: 50%;
   }
 
   .md\:scale-100 {
@@ -1364,6 +1393,10 @@ option {
 @media (min-width: 992px) {
   .lg\:absolute {
     position: absolute;
+  }
+
+  .lg\:right-5 {
+    right: 1.25rem;
   }
 
   .lg\:left-0 {
@@ -1438,8 +1471,8 @@ option {
     display: none;
   }
 
-  .lg\:h-\[785px\] {
-    height: 785px;
+  .lg\:h-\[675px\] {
+    height: 675px;
   }
 
   .lg\:h-\[72px\] {
@@ -1500,6 +1533,12 @@ option {
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
+  .lg\:scale-\[80\%\] {
+    --tw-scale-x: 80%;
+    --tw-scale-y: 80%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -1524,8 +1563,8 @@ option {
     gap: 1.5rem;
   }
 
-  .lg\:gap-\[135px\] {
-    gap: 135px;
+  .lg\:gap-\[60px\] {
+    gap: 60px;
   }
 
   .lg\:gap-20 {
@@ -1546,11 +1585,6 @@ option {
 
   .lg\:p-10 {
     padding: 2.5rem;
-  }
-
-  .lg\:py-\[136px\] {
-    padding-top: 136px;
-    padding-bottom: 136px;
   }
 
   .lg\:py-\[120px\] {
@@ -1680,8 +1714,8 @@ option {
     width: 40%;
   }
 
-  .xl\:w-2\/3 {
-    width: 66.666667%;
+  .xl\:w-auto {
+    width: auto;
   }
 
   .xl\:scale-90 {
